@@ -17,13 +17,13 @@
 <nav class="navbar">
   <div class="nav-container">
     <div class="nav-logo">
-      <span class="logo-icon">🎓</span>
-      <span class="logo-text">Ingeniería Austral</span>
+      <span class="logo-text">🎓 Ingeniería Austral</span>
     </div>
     <ul class="nav-menu">
       <li><a href="#hero">Inicio</a></li>
       <li><a href="#fundamentos">Fundamentos</a></li>
-      <li><a href="#carreras">Carreras</a></li>
+      <li><a href="#carreras">Majors</a></li>
+      <li><a href="#perfiles">Tus Caminos</a></li>
       <li><a href="#simulador">Simulador</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
@@ -33,10 +33,7 @@
 <!-- HERO SECTION -->
 <section id="hero" class="hero">
   <div class="hero-content">
-    <div class="austral-badge">
-      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='95' fill='none' stroke='%230B1F4B' stroke-width='2'/%3E%3Ctext x='100' y='105' text-anchor='middle' font-family='serif' font-size='24' font-weight='bold' fill='%230B1F4B'%3EA%3C/text%3E%3C/svg%3E" alt="Austral" class="badge-img">
-      Universidad Austral
-    </div>
+    <div class="austral-badge">UNIVERSIDAD AUSTRAL</div>
     
     <h1 class="hero-title">
       Elegí tu propia<br>
@@ -44,39 +41,28 @@
     </h1>
     
     <p class="hero-subtitle">
-      Fundamentos en común + Major + Minors = Tu carrera única
+      Fundamentos en común + Major + Minors = Tu carrera única<br>
+      <small>Dos años iguales para todas las carreras.<br>Luego, especialízate en lo que más te apasiona.</small>
     </p>
     
-    <div class="hero-stats">
-      <div class="stat">
-        <span class="stat-num">4</span>
-        <span class="stat-label">Majors</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num">28</span>
-        <span class="stat-label">Minors</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num">5</span>
-        <span class="stat-label">Años</span>
-      </div>
-    </div>
-    
-    <a href="#simulador" class="btn btn-primary">Descubre tu Carrera</a>
+    <a href="#simulador" class="btn btn-primary">Descubre tu Carrera →</a>
   </div>
+  
+  <div class="hero-accent"></div>
 </section>
 
 <!-- FUNDAMENTOS SECTION -->
 <section id="fundamentos" class="fundamentos">
   <div class="container">
     <h2 class="section-title">Fundamentos en Común</h2>
-    <p class="section-subtitle">Años 1 y 2 - Igual para todas las carreras</p>
+    <p class="section-subtitle">Años 1 y 2 - Iguales para todas las carreras</p>
+    <p class="section-desc">Te enseñamos a PENSAR COMO INGENIERO. Matemática, física, programación, datos y humanísticas. Al final del segundo año sabés qué camino querés tomar — con criterio propio.</p>
     
     <div class="fundamentos-grid">
       <div class="fund-card">
         <span class="fund-icon">📐</span>
         <h3>Matemática & Física</h3>
-        <p>La base de todas las ingenierías. Herramientas formales para modelar el mundo.</p>
+        <p>La base de todas las ingenierías. Modelar el mundo físico con rigor.</p>
       </div>
       <div class="fund-card">
         <span class="fund-icon">💻</span>
@@ -105,72 +91,84 @@
     
     <div class="carreras-grid">
       <!-- INDUSTRIAL -->
-      <div class="carrera-card">
+      <div class="carrera-card" data-carrera="industrial">
         <div class="carrera-header" style="background: linear-gradient(135deg, #c05000 0%, #ff6b35 100%)">
           <span class="carrera-icon">⚙️</span>
-          <h3>Industrial</h3>
+          <div>
+            <h3>Industrial</h3>
+            <p>Optimiza sistemas y procesos</p>
+          </div>
         </div>
         <div class="carrera-body">
-          <p>Optimiza sistemas, procesos y organizaciones. Desde la fábrica hasta la estrategia.</p>
-          <div class="carrera-minors">
-            <span class="minor-tag">Energía</span>
-            <span class="minor-tag">Supply Chain</span>
-            <span class="minor-tag">Sostenibilidad</span>
-            <span class="minor-tag">IA Industrial</span>
-          </div>
+          <p>Desde la fábrica hasta la estrategia empresarial. Gestión, operaciones, sostenibilidad.</p>
+          <button class="btn btn-secondary btn-small" onclick="abrirModal('industrial')">Ver plan →</button>
         </div>
       </div>
       
       <!-- INFORMÁTICA -->
-      <div class="carrera-card">
+      <div class="carrera-card" data-carrera="informatica">
         <div class="carrera-header" style="background: linear-gradient(135deg, #0066b3 0%, #0099ff 100%)">
           <span class="carrera-icon">💻</span>
-          <h3>Informática</h3>
+          <div>
+            <h3>Informática</h3>
+            <p>Sistemas inteligentes y seguros</p>
+          </div>
         </div>
         <div class="carrera-body">
-          <p>Diseña sistemas inteligentes, seguros y escalables. Software, IA, ciberseguridad.</p>
-          <div class="carrera-minors">
-            <span class="minor-tag">IA & ML</span>
-            <span class="minor-tag">Ciberseguridad</span>
-            <span class="minor-tag">Videojuegos</span>
-            <span class="minor-tag">Management</span>
-          </div>
+          <p>Software, IA, ciberseguridad, datos. Diseña el futuro digital.</p>
+          <button class="btn btn-secondary btn-small" onclick="abrirModal('informatica')">Ver plan →</button>
         </div>
       </div>
       
       <!-- BIOMÉDICA -->
-      <div class="carrera-card">
+      <div class="carrera-card" data-carrera="biomedica">
         <div class="carrera-header" style="background: linear-gradient(135deg, #6b22a8 0%, #d946ef 100%)">
-          <span class="carrera-icon">🧬</span>
-          <h3>Biomédica</h3>
+          <span class="carrera-icon">🩺</span>
+          <div>
+            <h3>Biomédica</h3>
+            <p>Tecnología al servicio de la salud</p>
+          </div>
         </div>
         <div class="carrera-body">
-          <p>Tecnología al servicio de la salud. Instrumentos, diagnósticos, bioinformática.</p>
-          <div class="carrera-minors">
-            <span class="minor-tag">Bioinformática</span>
-            <span class="minor-tag">Imágenes Médicas</span>
-            <span class="minor-tag">Prótesis</span>
-            <span class="minor-tag">Física Médica</span>
-          </div>
+          <p>Instrumentos, imágenes diagnósticas, prótesis, bioinformática.</p>
+          <button class="btn btn-secondary btn-small" onclick="abrirModal('biomedica')">Ver plan →</button>
         </div>
       </div>
       
       <!-- AI & DATOS -->
-      <div class="carrera-card">
+      <div class="carrera-card" data-carrera="ai-datos">
         <div class="carrera-header" style="background: linear-gradient(135deg, #1a4bb8 0%, #00c9b1 100%)">
           <span class="carrera-icon">🤖</span>
-          <h3>AI & Datos</h3>
-        </div>
-        <div class="carrera-body">
-          <p>Modela problemas complejos con IA, ML y análisis avanzado. El futuro es aquí.</p>
-          <div class="carrera-minors">
-            <span class="minor-tag">IA Generativa</span>
-            <span class="minor-tag">MLOps</span>
-            <span class="minor-tag">Analytics</span>
-            <span class="minor-tag">LLMs</span>
+          <div>
+            <h3>AI & Datos</h3>
+            <p>Inteligencia artificial & análisis</p>
           </div>
         </div>
+        <div class="carrera-body">
+          <p>Machine Learning, IA Generativa, análisis avanzado. El futuro es aquí.</p>
+          <button class="btn btn-secondary btn-small" onclick="abrirModal('ai-datos')">Ver plan →</button>
+        </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL DE PLAN DE ESTUDIOS -->
+<div id="modal-plan" class="modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="cerrarModal()">&times;</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<!-- PERFILES FLUIDOS SECTION -->
+<section id="perfiles" class="perfiles">
+  <div class="container">
+    <h2 class="section-title">Tus Caminos Posibles</h2>
+    <p class="section-subtitle">No hay dos ingenieros iguales. Combiná tu major con los minors que quieras</p>
+    
+    <div class="perfiles-grid" id="perfiles-grid">
+      <!-- Se genera con JavaScript -->
     </div>
   </div>
 </section>
@@ -178,8 +176,8 @@
 <!-- SIMULADOR SECTION -->
 <section id="simulador" class="simulador">
   <div class="container">
-    <h2 class="section-title">Descubre Tu Carrera</h2>
-    <p class="section-subtitle">Quiz vocacional interactivo - 10 minutos</p>
+    <h2 class="section-title">¿Cuál es tu Major?</h2>
+    <p class="section-subtitle">Quiz interactivo - Descubrí con qué carrera conectás más</p>
     
     <div class="simulador-content">
       <iframe 
@@ -204,7 +202,7 @@
         <input 
           type="text" 
           id="nombre" 
-          placeholder="Tu nombre" 
+          placeholder="Tu nombre completo" 
           required
           class="form-input"
         >
@@ -223,18 +221,18 @@
       <div class="form-group">
         <select id="interes" class="form-input" required>
           <option value="">¿Qué te interesa?</option>
-          <option value="industrial">Industrial</option>
-          <option value="informatica">Informática</option>
-          <option value="biomedica">Biomédica</option>
-          <option value="ai-datos">AI & Datos</option>
-          <option value="consulta">Solo consultas</option>
+          <option value="industrial">⚙️ Industrial</option>
+          <option value="informatica">💻 Informática</option>
+          <option value="biomedica">🩺 Biomédica</option>
+          <option value="ai-datos">🤖 AI & Datos</option>
+          <option value="consulta">📧 Consulta general</option>
         </select>
       </div>
       
       <div class="form-group">
         <textarea 
           id="mensaje" 
-          placeholder="Tu mensaje (opcional)" 
+          placeholder="¿Alguna pregunta? (opcional)" 
           rows="4"
           class="form-input"
         ></textarea>
@@ -254,23 +252,25 @@
   <div class="container">
     <div class="footer-content">
       <div class="footer-section">
-        <h4>Austral Ingeniería</h4>
+        <h4>🎓 Austral Ingeniería</h4>
         <p>Universidad Austral<br>Pilar, Buenos Aires<br>Argentina</p>
       </div>
       
       <div class="footer-section">
-        <h4>Enlaces</h4>
+        <h4>Secciones</h4>
         <ul>
           <li><a href="#fundamentos">Fundamentos</a></li>
-          <li><a href="#carreras">Carreras</a></li>
+          <li><a href="#carreras">Majors</a></li>
+          <li><a href="#perfiles">Tus Caminos</a></li>
           <li><a href="#simulador">Simulador</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
       </div>
       
       <div class="footer-section">
         <h4>Contacto</h4>
         <ul>
-          <li><a href="https://www.austral.edu.ar" target="_blank">Sitio Oficial</a></li>
+          <li><a href="https://www.austral.edu.ar" target="_blank">Sitio Oficial →</a></li>
           <li>admisiones@austral.edu.ar</li>
           <li>+54 (2324) 48-3000</li>
         </ul>
@@ -283,8 +283,12 @@
   </div>
 </footer>
 
-<!-- FIREBASE -->
-<script type="module" src="app.js"></script>
+<!-- DATA CARRERAS & PERFILES -->
+<script src="data-carreras.js"></script>
+<script src="data-perfiles.js"></script>
+
+<!-- APP SCRIPTS -->
+<script src="app.js"></script>
 
 </body>
 </html>
